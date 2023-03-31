@@ -2,7 +2,36 @@ package com.objectEx;
 
 public class Member {
 	public static void main(String[] args) {
+		//멤버가 가지고 있는 해시코드
 		Member mem1 = new Member("id");
+		
+		System.out.println("========================");
+		/**
+		 * hashCode()
+		 *  : 객체를 식별하는 하나의 정수값
+		 *  Object클래스의 객체 해시코드 메소드는 객체메모리 번지를 이용하여
+		 *  해시코드를 만들어 리턴합니다
+		 *  ==> 객체마다 다른 값을 가집니다.
+		 *  
+		 *  두 객제가 동등한지 비교하는데 사용됨. 
+		 */
+		
+		Object obj = new Object();
+		
+		System.out.println(mem1.hashCode());
+		//숫자를 16진수로 변환  (인티저의 메소드) / toHexString(정적멤버임)
+		//16진수는 10을 넘어가는 수는 문자로 표현
+		String str = Integer.toHexString(mem1.hashCode());
+		
+		System.out.println("hashCode() 16진수로 변환" + str);
+		System.out.println(mem1.toString());
+		System.out.println("========================");
+		
+		
+		
+		
+		
+	//	Member mem1 = new Member("id");
 		Member mem2 = new Member("id");
 		// .equals : 두 객체를 비교합니다.
 		System.out.println("mem1.equals(mem2) : ");
